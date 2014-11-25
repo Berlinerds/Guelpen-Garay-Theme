@@ -1,0 +1,13 @@
+[13-Mar-2012 17:13:16] PHP Fatal error:  Call to undefined function  get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[10-May-2012 12:52:44 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[05-Feb-2013 11:59:24 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[20-Mar-2013 10:22:22 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[16-May-2013 10:31:07 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[04-Jun-2013 11:46:41 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[01-Aug-2013 15:25:50 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[12-Sep-2013 12:38:08 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[22-Jan-2014 18:33:17 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/404.php on line 10
+[18-Mar-2014 09:45:16 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[20-May-2014 11:30:31 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[25-Sep-2014 15:23:25 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
+[12-Nov-2014 12:56:33 Europe/Berlin] PHP Fatal error:  Call to undefined function get_header() in /home/spanisch/guelpen-garay.com/wp-content/themes/ruso/index.php on line 16
