@@ -12,7 +12,7 @@ function ts_setup() {
 	// This theme uses post thumbnails
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'slider-post-thumbnail', 940, 400, true ); // Slider Thumbnail
+		add_image_size( 'slider-post-thumbnail', 1080, 400, true ); // Slider Thumbnail
 		add_image_size( 'portfolio-post-thumbnail', 280, 150, true ); // Portfolio Thumbnail
 		add_image_size( 'portfolio2-post-thumbnail', 390, 150, true ); // Portfolio2 Thumbnail
 	}
