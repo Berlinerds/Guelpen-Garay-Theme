@@ -1,4 +1,17 @@
+	<?php
+
+	/*
+	*	x_alt. Packages que ya no queremos usar
+	*	
+	*
+	*/
+
 	
+	/*
+	*	slider.php
+	*/
+
+	?>
 			<div id="header">
 				<div id="slider">
 					<?php $stext = array();?>
@@ -17,9 +30,9 @@
 						<?php 
 							if($cf_thumb!=""){
 								if(get_the_excerpt()!=""){
-									echo "<img src='" . $cf_thumb . "' alt='' title='#post". get_the_ID()."'  />";
+									echo "<img width='1080' src='" . $cf_thumb . "' alt='' title='#post". get_the_ID()."'  />";
 								}else{
-									echo "<img src='" . $cf_thumb . "' alt='' title=''  />";
+									echo "<img width='1080' src='" . $cf_thumb . "' alt='' title=''  />";
 								}
 							}else{
 								if(get_the_excerpt()!=""){

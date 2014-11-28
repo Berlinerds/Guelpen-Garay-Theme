@@ -108,7 +108,7 @@ if($favicon =="" ){
 		
      });
 	 
-	$(window).load(function() {
+	/*$(window).load(function() {
 		// Responsive adaptation 
 		var win_width = $(window)[0].innerWidth;
 		var win_limit = 1080;
@@ -132,7 +132,7 @@ if($favicon =="" ){
 				startSlide:0 //Set starting Slide (0 index)
 			});
 		}
-	});
+	});*/
 	
 	 
 </script>
@@ -198,12 +198,10 @@ if($favicon =="" ){
 <![endif]-->
 
 
-<?php 
-//$current_user = wp_get_current_user()->user_login;
-//if (is_user_logged_in() && $current_user === 'skepto') : 
-?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/responsive_style.css" />
-<?php //endif; ?>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/anythingslider/animate.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/anythingslider/anythingslider.css" />
+
 
 </head>
 
@@ -268,8 +266,9 @@ if($favicon =="" ){
 	<div id="content_out" class="snap-content">
 	<div id="menu_tab" class="clearfix"><div id="menu_tab--holder"></div></div>
 	<div id="wrapper">
-		<div id="container">
-			<div id="top">
+
+		<div id="top">
+			<div class="top_holder clearfix">
 			<?php
 			$logotype = get_option('templatesquare_logo_type');
 			$logoimage = get_option('templatesquare_logo_image'); 
@@ -277,7 +276,7 @@ if($favicon =="" ){
 			if($logoimage == ""){ $logoimage = get_bloginfo('template_url') . "/images/logo.png"; }
 			?>
 			<?php if($logotype == 'textlogo'){ ?>
-			<div id="logo">
+			<div id="logo" class="clearfix">
 				<div id="logo-text">
 					<?php if($sitename==""){?>
 						<h1><a href="<?php echo get_option('home'); ?>/" title="<?php _e('Click for Home','templatesquare'); ?>"><?php bloginfo('name'); ?></a></h1>
@@ -306,7 +305,11 @@ if($favicon =="" ){
 					  )); 
 				?>
 				</div><!-- #topnavigation -->
-			</div><!-- #top -->
+			</div>
+		</div><!-- #top -->
+
+		<div id="container">
+			
 			
 			<?php 
 			if(is_front_page()){

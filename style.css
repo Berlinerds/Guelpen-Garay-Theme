@@ -346,8 +346,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =Container
 -------------------------------------------------------------- */
-#wrapper{background-image:url(images/bg-top.png); background-repeat:repeat-x;}
+/*#wrapper{background-image:url(images/bg-top.png); background-repeat:repeat-x;}*/
+
+#wrapper {
+
+}
+
 /*#container{ width:940px; margin:0 auto;}*/
+
 #container { 
 	width:1080px; 
 	margin:0 auto; 
@@ -357,8 +363,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =Top
 -------------------------------------------------------------- */
-#top{position:relative; height:65px; z-index:200}
-#logo{width:262px; float:left; position:relative; padding-left:6px;}
+#top { 
+	position: relative;
+	height: 106px;
+	z-index: 200;
+	background: #000;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.top_holder {
+	width: 1080px;
+	margin: 0px auto;
+}
+
+#logo {
+	width: 262px;
+	float: left;
+	position: relative;
+	padding-left: 6px;
+	margin-left: -49px;
+}
+
 #logo-img{top:0; z-index:200; position:absolute}
 #logo-text{background-image:url(images/bg-logotext.png); background-repeat:no-repeat;; height:106px; width:268px; position:absolute; z-index:200;}
 #logo-text h1{ font-size:40px; text-align:center; text-transform:uppercase; padding:40px 0 0 0;}
@@ -374,7 +399,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =Header
 -------------------------------------------------------------- */
-#header{height:430px; position:relative;}
+/*#header{height:430px; position:relative; margin: 1.8em 0 0 0;}*/
+
+#header {
+	height:430px; 
+	position:relative; 
+	margin: 1.8em 0 0 0;
+}
+
 #breadcrumb{height:30px; position:relative; clear:both;}
 #navlink{position:absolute; left:285px; font-size:11px; line-height:50px}
 #navlink a, #navlink a:visited{color:#828282;}
@@ -530,6 +562,41 @@ h1, h2, h3, h4, h5, h6 {
 /*#content{width:640px; float:left;}*/
 #content{width:70%; float:left;}
 #content.fullwidth{width:100%; float:none;}
+
+
+
+/* New Slider with AnythingSlider*/
+#slider {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+ul.slider_items {
+	margin: 1em 0 0 0;
+	padding: 0px;
+	background: transparent;
+	list-style: none;
+	display: block;
+	overflow: hidden;
+}
+
+li.slider_item {
+	background: transparent;
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: block;
+	overflow: hidden;
+	height: 400px;
+}
+
+li.slider_item > img {
+	width: 100%;
+	height: auto;
+}
+
 
 /* Box style */
 .box-type1{padding:0 0 0 10px; margin-bottom:20px; color:#ccc; position:relative}

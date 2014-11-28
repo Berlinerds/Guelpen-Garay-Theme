@@ -7,7 +7,5 @@ $(document).ready(function() {
 		},function(){
 		$(this).find('ul:first').css({visibility: "hidden"});
 		});
-		
-		
 });		 
 	

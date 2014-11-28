@@ -28,6 +28,8 @@ function ts_setup() {
 endif;
 
 
+
+
 /* Slider */
 function ts_post_type_slider() {
 	register_post_type( 'slider',
