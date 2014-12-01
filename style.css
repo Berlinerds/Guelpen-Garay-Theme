@@ -401,10 +401,12 @@ h1, h2, h3, h4, h5, h6 {
 -------------------------------------------------------------- */
 /*#header{height:430px; position:relative; margin: 1.8em 0 0 0;}*/
 
-#header {
-	height:430px; 
-	position:relative; 
-	margin: 1.8em 0 0 0;
+#header { 
+	position: relative;
+	margin: 1.8em 0 1.8em 0;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0px 14px rgba(0,0,0,0.1);
 }
 
 #breadcrumb{height:30px; position:relative; clear:both;}

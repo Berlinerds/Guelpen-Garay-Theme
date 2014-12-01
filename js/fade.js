@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function () {
 
 if ($.browser.msie && $.browser.version < 7) return; // Don't execute code if it's IE6 or below cause it doesn't support it.
 

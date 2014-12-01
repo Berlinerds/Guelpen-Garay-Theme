@@ -146,7 +146,91 @@ padding: 30px 0 0 11px;
 
 /* === mobile first... === */
 
+@media screen and (max-width: 1090px) {
+
+	#container { 
+		width:960px; 
+		margin:0 auto; 
+		/*border: 1px solid red;*/
+	}
+
+	.top_holder {
+		width: 960px;
+		margin: 0px auto;
+	}
+
+	#slider,
+	.slider_items {
+		width: 960px;
+		height: 400px;
+		list-style: none;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+
+}
+
+@media screen and (max-width: 970px) {
+
+	#container { 
+		width:860px; 
+		margin:0 auto; 
+		/*border: 1px solid red;*/
+	}
+
+	.top_holder {
+		width: 860px;
+		margin: 0px auto;
+	}
+
+	#slider,
+	.slider_items {
+		width: 860px;
+		height: 400px;
+		list-style: none;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+
+}
+
+@media screen and (max-width: 870px) {
+
+	#container { 
+		width:760px; 
+		margin:0 auto; 
+		/*border: 1px solid red;*/
+	}
+
+	.top_holder {
+		width: 760px;
+		margin: 0px auto;
+	}
+
+	#slider,
+	.slider_items {
+		width: 760px;
+		height: 400px;
+		list-style: none;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+
+}
+
 @media screen and (max-width: 770px) {
+
+	.slider_items_responsive {
+		display: block !important;
+	} 
+
+	.slider_items {
+		display: none;
+	}
+
+	.top_holder {
+		width: 100%;
+	}
 
 	.body-page #main {
 		padding: 0px;
