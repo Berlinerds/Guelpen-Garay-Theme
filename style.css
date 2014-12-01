@@ -1220,13 +1220,31 @@ h3#reply-title {
 
 /* Search Widget */
 #search_widget{margin:20px auto; width:85%;}
-#searchform div{
+
+#searchform div {
 	padding:0px 50px 0px 10px;
 	border:solid 1px #eaeaea;
-	width:165px; background-image:url(images/icon-search.gif); background-repeat:no-repeat; background-color:#fff; background-position:right; text-align:right}
+	background-image:url(images/icon-search.gif); 
+	background-repeat:no-repeat; 
+	background-color:#fff; 
+	background-position:right; 
+	border-radius: 3px;
+}
 
-#searchform .inputbox{width:175px; border:0px; padding:4px 0px 4px 0px ; margin-bottom:0px;  text-align:right }
-#sideright #searchform .inputbox{width:175px; border:0px; padding:0px 0px 4px 0px;  text-align:right }
+#searchform .inputbox {
+	width:175px; 
+	border:0px; 
+	padding:4px 0px 4px 0px ; 
+	margin-bottom:0px;  
+	font-size: 1em !important;
+}
+
+#sideright #searchform .inputbox{
+	width:175px; 
+	border:0px; 
+	padding:0px 0px 4px 0px;
+}
+
 #content #search_widget{ margin:0 !important}
 
 .widget_search .side-box{background-color:#303030 !important; padding:10px 0 20px 0;}
