@@ -416,16 +416,29 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =Menu
 -------------------------------------------------------------- */
-#topnavigation{width:672px; height:65px; float:right; position:relative; z-index:100}
-#topnavigation ul{
+#topnavigation { 
+	width:672px; 
+	height:65px; 
+	float:right; 
+	position:relative; 
+	z-index:100;
+}
+
+#topnavigation ul {
 	margin:0;
 	padding:0;
 	list-style-type:none;
 	position:relative;
 	line-height:1.5em; 
 }
-#topnavigation ul{padding:10px 0px 0px 0px; float:right; position:relative;}
-#topnavigation a{
+
+#topnavigation ul {
+	padding:10px 0px 0px 0px; 
+	float:right; 
+	position:relative;
+}
+
+#topnavigation a {
 	display:block;
 	padding:3px 20px;
 	color:#ffffff;
@@ -540,6 +553,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topnavigation .cm{background-image:url(images/curve.gif); width:5px; height:5px; position:absolute; left:10px; bottom:4px}
+
+
+/* =New Navigation Block
+-------------------------------------------------------------- */
+
+#top .top_holder #topnavigation *,
+#top .top_holder #topnavigation *:hover {
+	margin: 0px; 
+	padding: 0px;
+	background: none;
+	font-family: 'Arial', sans-serif;
+	font-size: 1em;
+	position: static;
+}
+
+#top .top_holder #topnavigation .topnavigation_a {
+	margin-top: 60px;
+}
+
+#top .top_holder #topnavigation .topnavigation_a ul {
+	
+}
+
+#top .top_holder #topnavigation .topnavigation_a ul li {
+	padding: 0 8px;
+	border-left: 2px solid #5A5A5A;
+	line-height: 1em;
+}
+
+#top .top_holder #topnavigation .topnavigation_a ul li:last-child {
+	padding: 0 0 0 8px;
+}
+
+#top .top_holder #topnavigation .topnavigation_a ul li:first-child {
+	border-left: 0px
+}
+
+#top .top_holder #topnavigation .topnavigation_a ul li a {
+	text-transform: uppercase;
+}
+
 
 
 /* =Content

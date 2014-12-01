@@ -3,6 +3,7 @@
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html <?php language_attributes(); ?>>
 <head>
+<meta charset="<?php bloginfo( 'charset' );?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -265,26 +266,36 @@ if($favicon =="" ){
 			
 			<?php endif; ?>
 				
-				<div id="topnavigation">
-				<?php wp_nav_menu( array(
-					  'container'       => 'ul', 
-					  'menu_class'      => 'menu', 
-					  'menu_id'         => 'topnav',
-					  'depth'           => 0,
-					  'sort_column'    => 'menu_order',
-					  'theme_location' => 'mainmenu' 
-					  )); 
-				?>
+				<div id="topnavigation">					
+					<div class="topnavigation_a">
+						<ul class="navigation">
+						<?php 
+						//wp_nav_menu( array('container' => 'ul','menu_class' => 'menu', 'menu_id' => 'topnav', 'depth' => 0, 'sort_column' => 'menu_order', 'theme_location' => 'mainmenu')); 
+						$menu_name = 'mainmenu';
+						
+						if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {    
+						    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+						    $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+						    foreach ($menu_items as $key => $menu_item) {
+						        $title = $menu_item->title;
+						        $lil_title = ($title === 'русский') ? 'ru' : substr($title, 0, 2);
+						        echo '<li class="navigation_item"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
+						    }
+						}
+						?>
+
+						</ul>
+					</div>
 				</div><!-- #topnavigation -->
 			</div>
 		</div><!-- #top -->
 
 		<div id="container">
 			
-			
-			<?php 
-			if(is_front_page()){
-				//include_once(TEMPLATEPATH .'/twitter.php');
-				include_once(TEMPLATEPATH .'/slider.php');
-			}
-			 ?>
+		<?php 
+		if(is_front_page()){
+			//include_once(TEMPLATEPATH .'/twitter.php');
+			include_once(TEMPLATEPATH .'/slider.php');
+		}
+		?>
