@@ -108,33 +108,6 @@ if($favicon =="" ){
 		
      });
 	 
-	/*$(window).load(function() {
-		// Responsive adaptation 
-		var win_width = $(window)[0].innerWidth;
-		var win_limit = 1080;
-		if (win_width < win_limit) {
-			$('#slider').nivoSlider({
-				effect:'fade',
-				slices: 1,
-				animSpeed:<?php echo $speed; ?>, //Slide transition speed
-				pauseTime:<?php echo $timeout; ?>,
-				directionNav: false, //Next &amp; Prev
-				startSlide: 0 //Set starting Slide (0 index)
-			});
-			
-		} else {
-			$('#slider').nivoSlider({
-				effect:'<?php echo $effect; ?>', //Specify sets like: 'fold,fade,sliceDown'
-				slices:<?php echo $slices; ?>,
-				animSpeed:<?php echo $speed; ?>, //Slide transition speed
-				pauseTime:<?php echo $timeout; ?>,
-				directionNav:false, //Next &amp; Prev
-				startSlide:0 //Set starting Slide (0 index)
-			});
-		}
-	});*/
-	
-	 
 </script>
 
 <script type="text/JavaScript" src="<?php bloginfo('template_url'); ?>/js/snap.min.js"></script>
@@ -187,43 +160,31 @@ if($favicon =="" ){
 	};
 	
 	//document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
-
 </script>
-
-
-
 
 <!--[if IE]>
 <script type="text/JavaScript" src="<?php bloginfo('template_url'); ?>/js/DD_belatedPNG.js"></script>
 <![endif]-->
 
-
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/responsive_style.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/anythingslider/animate.css" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/anythingslider/anythingslider.css" />
 
-
 </head>
 
-<body <?php if(!is_front_page()){echo 'class="body-page"';}?>>
-<!--<?php echo $post->guid;?>-->
-<!--<?php echo get_current_blog_id(); ?>-->
+<body <?php if(!is_front_page()) { echo 'class="body-page"'; } ?>>
 
-<?php 
-//$current_user = wp_get_current_user()->user_login;
-//if (is_user_logged_in() && $current_user === 'skepto') : 
-?>
 	<div class="drawers snap-drawers">
 		<div class="left-drawer snap-drawer">
 			<?php
 			$current_blog = get_current_blog_id();
 			
 			$lang_types   = array(
-				'1' => array(0 => 'DE', 1 => 'menuprincipal RU' ), // ok 
-				'2' => array(0 => 'RU', 1 => 'secundario'), 	   // no
-				'3' => array(0 => 'ES', 1 => 'menuprincipal RU' ), // ok 
-				'4' => array(0 => 'EN', 1 => 'secundario' ),	   // no
-				'5' => array(0 => 'FR', 1 => 'secundario' )	       // no
+				'1' => array(0 => 'DE', 1 => 'menuprincipal RU' ),  
+				'2' => array(0 => 'RU', 1 => 'secundario'), 	   
+				'3' => array(0 => 'ES', 1 => 'menuprincipal RU' ),  
+				'4' => array(0 => 'EN', 1 => 'secundario' ),	  
+				'5' => array(0 => 'FR', 1 => 'secundario' )	     
 			);
 			
 			$defaults_1   = array(
@@ -256,12 +217,11 @@ if($favicon =="" ){
 			
 			<div id="footer">
 				<div id="footer-logo"><img src="http://guelpen-garay.com/wp-content/themes/ruso/images/logo-footer.png" alt=""></div>
-				<div id="footer-text">&copy; 2011 G&uuml;lpen &amp; Garay</div>
+				<div id="footer-text">&copy; 2014 G&uuml;lpen &amp; Garay</div>
 			</div>
 			
 		</div>
 	</div>
-<?php //endif; ?>
 
 	<div id="content_out" class="snap-content">
 	<div id="menu_tab" class="clearfix"><div id="menu_tab--holder"></div></div>
