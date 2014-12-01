@@ -229,13 +229,20 @@ if($favicon =="" ){
 
 		<div id="top">
 			<div class="top_holder clearfix">
+			
 			<?php
-			$logotype = get_option('templatesquare_logo_type');
+
+			$logotype  = get_option('templatesquare_logo_type');
 			$logoimage = get_option('templatesquare_logo_image'); 
-			$sitename = get_option('templatesquare_site_name');
-			if($logoimage == ""){ $logoimage = get_bloginfo('template_url') . "/images/logo.png"; }
+			$sitename  = get_option('templatesquare_site_name');
+			if ($logoimage == "") { 
+				$logoimage = get_bloginfo('template_url') . "/images/logo.png"; 
+			}
+			
 			?>
-			<?php if($logotype == 'textlogo'){ ?>
+
+			<?php if ($logotype == 'textlogo') : ?>
+
 			<div id="logo" class="clearfix">
 				<div id="logo-text">
 					<?php if($sitename==""){?>
@@ -244,16 +251,20 @@ if($favicon =="" ){
 						<h1><a href="<?php echo get_option('home'); ?>/" title="<?php _e('Click for Home','templatesquare'); ?>"><?php echo $sitename; ?></a></h1>
 					<?php }?>
 				</div>
-			</div><!-- end #logo -->
-			<?php } else { ?>
+			</div> <!-- end #logo -->
+
+			<?php else : ?>
+
 				<div id="logo">
 					<div id="logo-img">
 						<a href="<?php echo home_url( '/' ); ?>" title="<?php _e('Click for Home','templatesquare'); ?>">
-							<img src="<?php echo $logoimage;?>" alt=""  />
+							<img src="<?php echo $logoimage; ?>" alt=""  />
 						</a>
 					</div>
-				</div><!-- #logo -->
-				<?php }?>
+				</div> <!-- #logo -->
+			
+			<?php endif; ?>
+				
 				<div id="topnavigation">
 				<?php wp_nav_menu( array(
 					  'container'       => 'ul', 
