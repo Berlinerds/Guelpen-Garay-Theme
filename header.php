@@ -269,6 +269,7 @@ if($favicon =="" ){
 				<div id="topnavigation">					
 					<div class="topnavigation_a">
 						<ul class="navigation">
+							<li class="navigation_item navigation_menu"><a href="#">Menu</a></li>'
 						<?php 
 						//wp_nav_menu( array('container' => 'ul','menu_class' => 'menu', 'menu_id' => 'topnav', 'depth' => 0, 'sort_column' => 'menu_order', 'theme_location' => 'mainmenu')); 
 						$menu_name = 'mainmenu';
@@ -276,11 +277,21 @@ if($favicon =="" ){
 						if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {    
 						    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 						    $menu_items = wp_get_nav_menu_items($menu->term_id);
+						    $num = 0;
+						    $last = sizeof($menu_items);
 
 						    foreach ($menu_items as $key => $menu_item) {
 						        $title = $menu_item->title;
 						        $lil_title = ($title === 'русский') ? 'ru' : substr($title, 0, 2);
-						        echo '<li class="navigation_item"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
+						        if ($num === 0) {
+						        	echo '<li class="navigation_item first"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
+						        } else if ($num === $last) {
+						        	echo '<li class="navigation_item last"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
+						        } else {
+						        	echo '<li class="navigation_item"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
+						        }
+
+						        $num++;
 						    }
 						}
 						?>
@@ -290,6 +301,84 @@ if($favicon =="" ){
 				</div><!-- #topnavigation -->
 			</div>
 		</div><!-- #top -->
+
+			<?php 
+			/* ==== PHP functions of the block menus ==== */
+
+			$defaults_3   = array(
+				'theme_location'  => '',
+				'menu'            => 'secundario',
+				'container'       => 'div',
+				'container_class' => 'menu_lateral',
+				'menu_class'      => 'menu',
+				'echo'            => true,
+				'fallback_cb'     => false,
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			);
+
+			$defaults_4   = array(
+				'theme_location'  => '',
+				'menu'            => $lang_types[$current_blog][1],
+				'container'       => 'div',
+				'container_class' => 'menu_lateral',
+				'menu_class'      => 'menu',
+				'echo'            => true,
+				'fallback_cb'     => false,
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			);
+
+			/* WP_Query para Nachrichten */
+
+			$args = array(
+				'cat'              =>  1,
+				'post_type'        => 'post',
+				'post_status'      => 'publish',
+				'order'            => 'DESC',
+				'orderby'          => 'date',						
+				'posts_per_page'   => 5,
+			);
+			$menu_query = new WP_Query( $args );
+			wp_reset_query();
+			?>
+			
+			<div class="menu_block">
+			<div class="menu_block__holder">
+				<div class="menu_block--top">
+					<div class="menu_title">Menu</div>
+					<div class="menu_close">
+						<img src="images/delete.png" alt="close" class="close" />
+					</div>
+				</div>
+				<div class="menu_block_menus">
+					<div class="menu_block__menu-1">
+						<span class="menu_block__menu-title">Menu a</span>
+						<div class="menu_block_block">
+							<?php wp_nav_menu( $defaults_3 ); ?>
+						</div>
+					</div>
+					<div class="menu_block__menu-2">
+						<span class="menu_block__menu-title">Menu b</span>
+						<div class="menu_block_block">
+							<ul>
+							<?php 								
+								if ( $menu_query->have_posts() ) : while ( $menu_query->have_posts() ) :
+									$menu_query->the_post(); 
+									echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+								endwhile;
+								endif;
+							?>
+							</ul>
+						</div>
+					</div>
+					<div class="menu_block__menu-3">
+						<span class="menu_block__menu-title">Menu c</span>
+						<div class="menu_block_block">
+							<?php wp_nav_menu( $defaults_4 ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="container">
 			
