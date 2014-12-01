@@ -341,12 +341,12 @@ if($favicon =="" ){
 			wp_reset_query();
 			?>
 			
-			<div class="menu_block">
+			<div class="menu_block closed">
 			<div class="menu_block__holder">
 				<div class="menu_block--top">
 					<div class="menu_title">Menu</div>
 					<div class="menu_close">
-						<img src="images/delete.png" alt="close" class="close" />
+						<img src="<?php echo bloginfo('template_directory' );?>/images/delete.png" alt="close" class="close" width="30"/>
 					</div>
 				</div>
 				<div class="menu_block_menus">

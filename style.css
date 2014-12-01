@@ -619,6 +619,25 @@ h1, h2, h3, h4, h5, h6 {
 	min-height: 200px;
 	background: rgba(255, 255, 255, .95);
 	padding: 2.3em;
+	-webkit-transition: -webkit-transform 400ms ease;
+		-ms-transition: 	-ms-transform 400ms ease;
+		 -o-transition: 	 -o-transform 400ms ease;
+			transition: 		transform 400ms ease;
+}
+
+.menu_block.opened .menu_block__holder {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+.menu_block.closed .menu_block__holder,
+.menu_block .menu_block__holder {
+	-webkit-transform: translate(0, -100%);
+	-ms-transform: translate(0, -100%);
+	-o-transform: translate(0, -100%);
+	transform: translate(0, -100%);
 }
 
 .menu_block--top {
@@ -632,23 +651,29 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	font-size: 1.4em;
 	color: #333;
-	font-weight: bolder;
+	font-weight: 600;
+	font-family: 'tuffyregular', sans-serif; 
 }
 
 .menu_block--top .menu_close {
 	float: right;
 	width: 30%;
 	text-align: right;
+	margin-top: -4px;
 }
 
 .menu_block--top .menu_close img.close {
-
+	opacity: 0.5;
 }
 
 .menu_block_menus {
 	border-top: 1px solid;
 	padding: 20px 0 0 0;
 	overflow: hidden;
+}
+
+.menu_block_menus > div.[class^='menu_block__menu-'] {
+
 }
 
 .menu_block_menus > div.menu_block__menu-1 {
@@ -671,20 +696,23 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .menu_block_menus .menu_block__menu-title {
-	font-size: 1.1em;
+	font-size: 1.2em;
 	color: #555;
 	font-weight: 400;
+	font-family: 'tuffyregular', sans-serif; 
+	margin: 0 0 1em 21px;
+	display: block;
 }
 
-.menu_block_menus .menu_block_block {
-	border-right: 1px solid #777;
-
+div[class^='menu_block__menu-'] .menu_block_block {
+	border-right: 1px solid #ddd;
 }
 
-.menu_block_menus .menu_block_block:last-child {
+.menu_block_menus > div.menu_block__menu-3 .menu_block_block {
 	border-right: 0px;
-
 }
+
+
 
 .menu_block_menus .menu_block_block ul {
 	
