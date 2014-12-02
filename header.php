@@ -269,7 +269,7 @@ if($favicon =="" ){
 				<div id="topnavigation">					
 					<div class="topnavigation_a">
 						<ul class="navigation">
-							<li class="navigation_item navigation_menu"><a href="#">Menu</a></li>'
+							<li class="navigation_item navigation_menu"><a href="#">Menu</a></li>
 						<?php 
 						//wp_nav_menu( array('container' => 'ul','menu_class' => 'menu', 'menu_id' => 'topnav', 'depth' => 0, 'sort_column' => 'menu_order', 'theme_location' => 'mainmenu')); 
 						$menu_name = 'mainmenu';
@@ -283,6 +283,7 @@ if($favicon =="" ){
 						    foreach ($menu_items as $key => $menu_item) {
 						        $title = $menu_item->title;
 						        $lil_title = ($title === 'русский') ? 'ru' : substr($title, 0, 2);
+						        
 						        if ($num === 0) {
 						        	echo '<li class="navigation_item first"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
 						        } else if ($num === $last) {
@@ -290,7 +291,6 @@ if($favicon =="" ){
 						        } else {
 						        	echo '<li class="navigation_item"><a href="' . $menu_item->url . '">' . $lil_title . '</a></li>';
 						        }
-
 						        $num++;
 						    }
 						}
