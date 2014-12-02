@@ -35,7 +35,7 @@
 				<?php } ?>
 				</div>
 				<div id="footer-logo_berlinerds">
-					<a href="www.berlinerds.com" target="_blank">
+					<a href="http://www.berlinerds.com" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/images/logo-footer_berlinerds.png" alt="" />
 					</a>
 				</div>
