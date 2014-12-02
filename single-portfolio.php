@@ -31,7 +31,7 @@ yoast_breadcrumb('<div id="con-breadcrumbs"><div id="breadcrumbs">','</div></div
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<div class="entry-content">
 						<div class="entry-content__holder"> 
-							<?php the_URL(); ?>
+							<?php the_Social_Block(); ?>
 							<?php the_content( __( 'Continue Reading', 'templatesquare' ) ); ?>
 							
 						</div>
