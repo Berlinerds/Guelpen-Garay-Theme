@@ -8,7 +8,6 @@
  */
 
 get_header(); 
-
 do_action('the_linkedin_URL');
 
 ?>

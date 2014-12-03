@@ -1582,6 +1582,13 @@ h3#reply-title {
 	margin: 35px 30px 0 0;
 }
 
+#footer-logo_berlinerds a span {
+	display: block;
+	margin: 21px 0 -35px;
+	font-size: 0.9em;
+	color: #767676;
+}
+
 /* =Mobile Safari ( iPad, iPhone and iPod Touch )
 -------------------------------------------------------------- */
 
