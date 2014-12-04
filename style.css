@@ -1195,7 +1195,18 @@ span.edit-link  {
 	display: none;
 } 
 
+.social_block_item {
+	float: left;
+	display: inline-block;
+	margin-right: 8px;
+}
 
+.social_block_item.vcard {
+	float: none;
+	clear: both;
+	display: block;
+	padding-top: 6px;
+}
 
 
 

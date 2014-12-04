@@ -376,7 +376,21 @@ if($favicon =="" ){
 					<div class="menu_block__menu-3">
 						<span class="menu_block__menu-title"></span>
 						<div class="menu_block_block">
-							<?php wp_nav_menu( $defaults_4 ); ?>
+							<?php 
+							$bid = get_current_blog_id();
+							switch ($bid) {
+							 	case 2:
+							 		break;
+							 	case 4:
+							 		break;
+							 	case 5:
+							 		break;
+							 	
+							 	default:
+							 		wp_nav_menu( $defaults_4 ); 
+							 		break;
+							 } 
+							?>
 						</div>
 					</div>
 				</div>

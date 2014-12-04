@@ -227,6 +227,22 @@ padding: 30px 0 0 11px;
 
 @media screen and (max-width: 770px) {
 
+	.social_block_item.vcard {
+		display: inline-block;
+		padding-top: 12px;
+	}
+
+	#content .content_block_main,
+	#content .content_block_aside {
+		padding: 0 0 0 0;
+		display: inline;
+	}
+
+	#content .content_block_aside > img {
+		max-width: 200px;
+	}
+
+
 	.menu_block {
 		display: none;
 	}
