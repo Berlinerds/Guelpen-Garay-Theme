@@ -173,7 +173,10 @@ if($favicon =="" ){
 
 </head>
 
-<body <?php if(!is_front_page()) { echo 'class="body-page"'; } ?>>
+<!--
+<body <?php if(!is_front_page()) { echo body-page; } ?>>
+-->
+<body <?php body_class();?> >
 
 	<div class="drawers snap-drawers">
 		<div class="left-drawer snap-drawer">
@@ -351,13 +354,13 @@ if($favicon =="" ){
 				</div>
 				<div class="menu_block_menus">
 					<div class="menu_block__menu-1">
-						<span class="menu_block__menu-title">Menu a</span>
+						<span class="menu_block__menu-title"></span>
 						<div class="menu_block_block">
 							<?php wp_nav_menu( $defaults_3 ); ?>
 						</div>
 					</div>
 					<div class="menu_block__menu-2">
-						<span class="menu_block__menu-title">Menu b</span>
+						<span class="menu_block__menu-title"></span>
 						<div class="menu_block_block">
 							<ul>
 							<?php 								
@@ -371,7 +374,7 @@ if($favicon =="" ){
 						</div>
 					</div>
 					<div class="menu_block__menu-3">
-						<span class="menu_block__menu-title">Menu c</span>
+						<span class="menu_block__menu-title"></span>
 						<div class="menu_block_block">
 							<?php wp_nav_menu( $defaults_4 ); ?>
 						</div>
