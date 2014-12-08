@@ -301,12 +301,14 @@ if($favicon =="" ){
 
 						</ul>
 					</div>
+					
 					<div style="float:right; clear:both;">
 						<script src="//platform.linkedin.com/in.js" type="text/javascript">
 	                    lang: en_US
 	                    </script>
-	                    <script type="IN/FollowCompany" data-id="3226559" data-counter="none"></script>
+	                    <script type="IN/FollowCompany" data-id="3226559" data-counter="right"></script>
 					</div>
+					
 				</div><!-- #topnavigation -->
 			</div>
 		</div><!-- #top -->

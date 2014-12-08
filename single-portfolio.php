@@ -75,11 +75,11 @@ yoast_breadcrumb('<div id="con-breadcrumbs"><div id="breadcrumbs">','</div></div
 
 										$back_to_href = array(
 											site_url() . '/blog/portfolio/anwalte-berlin/',
-											site_url() . '/ruso/portfolio/abogados/',
-											site_url() . '/abogados-berlin/portfolio/abogados/',
-											site_url() . '/lawyers-berlin/portfolio/gulpen-garay-lawyers/',
-											site_url() . '/avocats-berlin//portfolio/avocats-berlin/',
-											site_url() . '/adwokaty-berlin/portfolio/adwokaty-berlin/'										
+											site_url() . '/portfolio/abogados/',
+											site_url() . '/portfolio/abogados/',
+											site_url() . '/portfolio/gulpen-garay-lawyers/',
+											site_url() . '/portfolio/avocats-berlin/',
+											site_url() . '/portfolio/adwokaty-berlin/'										
 										);
 										?>
 										<a href="<?php echo $back_to_href[get_current_blog_id() - 1]; ?>" 
