@@ -77,7 +77,7 @@ yoast_breadcrumb('<div id="con-breadcrumbs"><div id="breadcrumbs">','</div></div
 											site_url() . '/blog/portfolio/anwalte-berlin/',
 											site_url() . '/portfolio/abogados/',
 											site_url() . '/portfolio/abogados/',
-											site_url() . '/portfolio/gulpen-garay-lawyers/',
+											site_url() . '/portfolio/guelpen-garay-lawyers/',
 											site_url() . '/portfolio/avocats-berlin/',
 											site_url() . '/portfolio/adwokaty-berlin/'										
 										);

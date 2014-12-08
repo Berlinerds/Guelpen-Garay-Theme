@@ -302,7 +302,7 @@ if($favicon =="" ){
 						</ul>
 					</div>
 					
-					<div style="float:right; clear:both;">
+					<div style="float:right; clear:both; margin: 7px -4px 0 0;">
 						<script src="//platform.linkedin.com/in.js" type="text/javascript">
 	                    lang: en_US
 	                    </script>
